@@ -208,7 +208,7 @@ static int batchFlushTime = 30;
         }
         
         [self.debugger publishEvent:[NSString stringWithFormat:@"Event: %@", eventName] withTimestamp:[NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]]
-                withProperties:props withErrors:[NSMutableArray new]];
+                withProperties:props];
     }
 }
 
@@ -222,7 +222,7 @@ static int batchFlushTime = 30;
         }
         
         [self.debugger publishEvent:[NSString stringWithFormat:@"Schema: %@", eventName] withTimestamp:[NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]]
-                withProperties:props withErrors:[NSMutableArray new]];
+                withProperties:props];
     }
 }
 

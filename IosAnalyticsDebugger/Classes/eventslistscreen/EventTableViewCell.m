@@ -39,7 +39,7 @@
     [self.additionalRows setDataSource:self];
     self.additionalRows.allowsSelection = false;
 
-    [self.expendCollapseImage setImage:[UIImage imageNamed:@"avo_debugger_collapse_arrow" inBundle:resBundle compatibleWithTraitCollection:nil]];
+    [self.expendCollapseImage setImage:[UIImage imageNamed:@"debugger_collapse_arrow" inBundle:resBundle compatibleWithTraitCollection:nil]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -75,7 +75,7 @@
         
         NSURL *bundleURL = [[[NSBundle bundleForClass:self.class] resourceURL] URLByAppendingPathComponent:@"IosAnalyticsDebugger.bundle"];
         NSBundle *resBundle = [NSBundle bundleWithURL:bundleURL];
-        [self.expendCollapseImage setImage:[UIImage imageNamed:@"avo_debugger_collapse_arrow" inBundle:resBundle compatibleWithTraitCollection:nil]];
+        [self.expendCollapseImage setImage:[UIImage imageNamed:@"debugger_collapse_arrow" inBundle:resBundle compatibleWithTraitCollection:nil]];
     }
 }
 
@@ -105,7 +105,7 @@
         } else {
             [self.eventName setTextColor:[UIColor blackColor]];
         }
-        [self.statusIcon setImage:[UIImage imageNamed:@"avo_debugger_tick" inBundle:resBundle compatibleWithTraitCollection:nil]];
+        [self.statusIcon setImage:[UIImage imageNamed:@"debugger_tick" inBundle:resBundle compatibleWithTraitCollection:nil]];
     }
 }
 

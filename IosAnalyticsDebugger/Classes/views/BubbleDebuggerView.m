@@ -73,7 +73,7 @@
     NSBundle *resBundle = [NSBundle bundleWithURL:bundleURL];
     if (hasError) {
         UIColor * errorColor = [UIColor colorWithRed:0.851 green:0.271 blue:0.325 alpha:1]; //:@"error_color"
-        UIImage * backgroundImage = [UIImage imageNamed:@"avo_bubble_error" inBundle:resBundle compatibleWithTraitCollection:nil];
+        UIImage * backgroundImage = [UIImage imageNamed:@"bubble_error" inBundle:resBundle compatibleWithTraitCollection:nil];
         if (backgroundImage != nil) {
             [self.bubble setImage:backgroundImage];
         } else {
@@ -99,7 +99,7 @@
         
         [self.counter setTextColor:errorColor];
     } else {
-        UIImage * backgroundImage = [UIImage imageNamed:@"avo_bubble" inBundle:resBundle compatibleWithTraitCollection:nil];
+        UIImage * backgroundImage = [UIImage imageNamed:@"bubble" inBundle:resBundle compatibleWithTraitCollection:nil];
         if (backgroundImage != nil) {
             [self.bubble setImage:backgroundImage];
         } else {

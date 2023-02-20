@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "DebuggerEventItem.h"
-#import "DebuggerPropError.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,7 +25,7 @@ static OnNewEventCallback onNewEventCallback;
 -(void) showBubbleDebugger;
 -(void) hideDebugger;
 -(void) publishEvent:(NSString *) eventName withParams:(NSDictionary *) params;
--(void) publishEvent:(NSString *) eventName withTimestamp:(NSNumber *) timestamp withProperties:(NSArray<DebuggerProp *> *) props withErrors:(NSArray<DebuggerPropError *> *) errors;
+-(void) publishEvent:(NSString *) eventName withTimestamp:(NSNumber *) timestamp withProperties:(NSArray<DebuggerProp *> *) props;
 -(BOOL) isEnabled;
 -(void) setSchemaId:(NSString *) schemaId;
 
