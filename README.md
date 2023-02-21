@@ -1,4 +1,4 @@
-# IosAnalyticsDebugger
+# AnalyticsDebugger
 
 [![Version](https://img.shields.io/cocoapods/v/IosAnalyticsDebugger.svg?style=flat)](https://cocoapods.org/pods/AnalyticsDebugger)
 [![License](https://img.shields.io/cocoapods/l/IosAnalyticsDebugger.svg?style=flat)](https://cocoapods.org/pods/AnalyticsDebugger)
