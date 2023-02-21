@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="436" height="647"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avo_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Xo5-WT-LSQ">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Xo5-WT-LSQ">
                     <rect key="frame" x="193" y="298.5" width="50" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -61,7 +61,7 @@
         </view>
     </objects>
     <resources>
-        <image name="avo_bubble" width="30" height="30"/>
+        <image name="bubble" width="30" height="30"/>
         <image name="badge_green" width="13" height="13"/>
     </resources>
 </document>

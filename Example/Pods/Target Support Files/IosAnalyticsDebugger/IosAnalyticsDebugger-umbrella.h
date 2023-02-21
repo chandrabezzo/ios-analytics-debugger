@@ -10,8 +10,6 @@
 #endif
 #endif
 
-#import "DebuggerAnalytics.h"
-#import "DebuggerAnalyticsDestination.h"
 #import "AnalyticsDebugger.h"
 #import "EventsListScreenViewController.h"
 #import "EventTableViewCell.h"
@@ -19,7 +17,6 @@
 #import "DebuggerEventItem.h"
 #import "DebuggerMessage.h"
 #import "DebuggerProp.h"
-#import "DebuggerPropError.h"
 #import "Util.h"
 #import "BarDebuggerView.h"
 #import "BubbleDebuggerView.h"

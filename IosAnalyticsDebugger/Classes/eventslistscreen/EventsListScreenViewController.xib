@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventsListScreenViewController">
             <connections>
-                <outlet property="avoLogoImage" destination="ug0-cr-KSC" id="Wqu-1f-mZG"/>
                 <outlet property="closeButton" destination="6G5-ul-omW" id="Ciy-F9-9cz"/>
                 <outlet property="closeButtonIcon" destination="9s1-MD-aQu" id="HkH-Xi-TTd"/>
                 <outlet property="closeText" destination="bR6-ND-dhF" id="U7S-Nc-OEx"/>
                 <outlet property="eventsTableView" destination="x1X-Iu-XFf" id="AZo-cy-n9y"/>
+                <outlet property="logoImage" destination="ug0-cr-KSC" id="Wqu-1f-mZG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,20 +25,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x1X-Iu-XFf">
-                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <rect key="frame" x="0.0" y="96" width="414" height="766"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6G5-ul-omW" userLabel="Top Bar">
-                    <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="48"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avo_debugger_close_button" translatesAutoresizingMaskIntoConstraints="NO" id="9s1-MD-aQu">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="debugger_close_button" translatesAutoresizingMaskIntoConstraints="NO" id="9s1-MD-aQu">
                             <rect key="frame" x="388" y="19" width="10" height="10"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="10" id="BFG-Tv-fK6"/>
                                 <constraint firstAttribute="width" constant="10" id="Pm9-va-d7b"/>
                             </constraints>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avo_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ug0-cr-KSC">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ug0-cr-KSC">
                             <rect key="frame" x="32" y="16" width="350" height="16"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRV-Hh-hdL" userLabel="botline">
@@ -88,8 +88,8 @@
         </view>
     </objects>
     <resources>
-        <image name="avo_debugger_close_button" width="10" height="10"/>
-        <image name="avo_logo" width="54" height="18"/>
+        <image name="debugger_close_button" width="10" height="10"/>
+        <image name="logo" width="54" height="18"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

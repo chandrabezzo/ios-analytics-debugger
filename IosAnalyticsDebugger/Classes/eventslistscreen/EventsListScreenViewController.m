@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *closeButton;
 @property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *closeButtonIcon;
-@property (weak, nonatomic) IBOutlet UIImageView *avoLogoImage;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 @property (weak, nonatomic) IBOutlet UILabel *closeText;
 
 @property (strong, nonatomic) NSMutableSet *expendedEvents;
@@ -49,14 +49,14 @@
     }];
     
     
-    UIImage * closeImage = [UIImage imageNamed:@"avo_debugger_close_button" inBundle:resBundle compatibleWithTraitCollection:nil];
+    UIImage * closeImage = [UIImage imageNamed:@"debugger_close_button" inBundle:resBundle compatibleWithTraitCollection:nil];
     if (closeImage != nil) {
         [self.closeButtonIcon setImage:closeImage];
         [self.closeText setText:@""];
     } else {
         [self.closeText setText:@"x"];
     }
-    [self.avoLogoImage setImage:[UIImage imageNamed:@"avo_logo" inBundle:resBundle compatibleWithTraitCollection:nil]];
+    [self.logoImage setImage:[UIImage imageNamed:@"logo" inBundle:resBundle compatibleWithTraitCollection:nil]];
 }
 
 - (void) viewDidAppear:(BOOL)animated {

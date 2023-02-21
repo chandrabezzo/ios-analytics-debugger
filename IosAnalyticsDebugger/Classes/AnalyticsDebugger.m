@@ -12,10 +12,7 @@
 #import "Util.h"
 #import "DebuggerMessage.h"
 #import "DebuggerProp.h"
-#import "DebuggerPropError.h"
 #import <Foundation/Foundation.h>
-#import "DebuggerAnalytics.h"
-#import "DebuggerAnalyticsDestination.h"
 
 static UIView<DebuggerView> *debuggerView = nil;
 
@@ -38,10 +35,6 @@ NSString *currentSchemaId;
     }
     
     analyticsDebuggerEvents = [NSMutableArray new];
-    
-    NSString *version = [[[NSBundle bundleForClass:[AnalyticsDebugger class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    [DebuggerAnalytics initAvoWithEnv:AVOEnvProd version:version
-              customNodeJsDestination:[DebuggerAnalyticsDestination new]];
     
     return self;
 }
@@ -73,8 +66,6 @@ NSString *currentSchemaId;
         if ([analyticsDebuggerEvents count] > 0) {
             [debuggerView showEvent:[analyticsDebuggerEvents objectAtIndex:0]];
         }
-        
-        [DebuggerAnalytics debuggerStartedWithFrameLocation:nil schemaId:currentSchemaId];
     });
 }
 
@@ -117,8 +108,6 @@ NSString *currentSchemaId;
             DebuggerEventItem * event = [analyticsDebuggerEvents objectAtIndex:index];
             [debuggerView showEvent:event];
         }
-        
-        [DebuggerAnalytics debuggerStartedWithFrameLocation:nil schemaId:currentSchemaId];
     });
 }
 
@@ -171,20 +160,13 @@ NSString *currentSchemaId;
     });
 }
 
-- (void) publishEvent:(NSString *) eventName withTimestamp:(NSNumber *) timestamp withProperties:(NSArray<DebuggerProp *> *) props withErrors:(NSArray<DebuggerPropError *> *) errors {
+- (void) publishEvent:(NSString *) eventName withTimestamp:(NSNumber *) timestamp withProperties:(NSArray<DebuggerProp *> *) props {
     
     DebuggerEventItem * event = [DebuggerEventItem new];
     
     event.name = eventName;
     event.timestamp = [timestamp doubleValue];
     event.messages = [NSMutableArray new];
-    for (id error in errors) {
-        DebuggerMessage * debuggerMessage = [self createMessageWithError:error];
-
-        if (debuggerMessage != nil) {
-            [event.messages addObject:debuggerMessage];
-        }
-    }
     event.eventProps = [NSMutableArray new];
     for (id prop in props) {
         if (prop != nil) {
@@ -257,17 +239,6 @@ NSString *currentSchemaId;
             onNewEventCallback(event);
         }
     });
-}
-
-- (DebuggerMessage *) createMessageWithError: (DebuggerPropError *) error {
-    NSString * propertyId = error.propertyId;
-    NSString * message = error.message;
-
-    if (propertyId == nil || message == nil) {
-        return nil;
-    }
-
-    return [[DebuggerMessage alloc] initWithPropertyId:propertyId withMessage:message withAllowedTypes:[NSArray new] withProvidedType:@""];
 }
 
 - (DebuggerMessage *) createMessageWithDictionary: (NSDictionary *) messageDict {

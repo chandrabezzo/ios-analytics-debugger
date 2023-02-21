@@ -76,7 +76,7 @@
         [self.eventTimeLabel setTextColor:[UIColor colorWithRed:0.867 green:0.867 blue:0.867 alpha:1]]; //@"light_grey_text_color"
         [self.eventNameLabel setTextColor:[UIColor whiteColor]];
     } else {
-        [self.statusIcon setImage:[UIImage imageNamed:@"avo_debugger_tick" inBundle:resBundle compatibleWithTraitCollection:nil]];
+        [self.statusIcon setImage:[UIImage imageNamed:@"debugger_tick" inBundle:resBundle compatibleWithTraitCollection:nil]];
         [self.dragHandle setImage:[UIImage imageNamed:@"drag_handle_grey" inBundle:resBundle compatibleWithTraitCollection:nil]];
         [self.background setBackgroundColor:[UIColor whiteColor]];
         [self.eventTimeLabel setTextColor:[UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1]]; // @"grey_text_color"

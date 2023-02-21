@@ -33,12 +33,8 @@ static AnalyticsDebugger *debugger = nil;
     [props addObject:[[DebuggerProp alloc] initWithId:@"id0" withName:@"Property with error" withValue:@"unknown"]];
     [props addObject:[[DebuggerProp alloc] initWithId:@"id1" withName:@"Good property" withValue:@"true"]];
     
-    NSMutableArray * errors = [NSMutableArray new];
-    
-    [errors addObject:[[DebuggerPropError alloc] initWithPropertyId:@"id0" withMessage:@"'Unknown' value is not supported in this property. 'Unknown' value is not supported in this property. 'Unknown' value is not supported in this property. 'Unknown' value is not supported in this property."]];
-    
     [debugger publishEvent:@"Event with Error" withTimestamp:[NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]]
-            withProperties:props withErrors:errors];
+            withProperties:props];
 }
 
 + (AnalyticsDebugger *) debugger {
