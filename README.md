@@ -1,8 +1,8 @@
 # IosAnalyticsDebugger
 
-[![Version](https://img.shields.io/cocoapods/v/IosAnalyticsDebugger.svg?style=flat)](https://cocoapods.org/pods/IosAnalyticsDebugger)
-[![License](https://img.shields.io/cocoapods/l/IosAnalyticsDebugger.svg?style=flat)](https://cocoapods.org/pods/IosAnalyticsDebugger)
-[![Platform](https://img.shields.io/cocoapods/p/IosAnalyticsDebugger.svg?style=flat)](https://cocoapods.org/pods/IosAnalyticsDebugger)
+[![Version](https://img.shields.io/cocoapods/v/IosAnalyticsDebugger.svg?style=flat)](https://cocoapods.org/pods/AnalyticsDebugger)
+[![License](https://img.shields.io/cocoapods/l/IosAnalyticsDebugger.svg?style=flat)](https://cocoapods.org/pods/AnalyticsDebugger)
+[![Platform](https://img.shields.io/cocoapods/p/IosAnalyticsDebugger.svg?style=flat)](https://cocoapods.org/pods/AnalyticsDebugger)
 
 ## Example
 
@@ -22,7 +22,7 @@ IosAnalyticsDebugger is available through [CocoaPods](https://cocoapods.org). To
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'IosAnalyticsDebugger'
+pod 'AnalyticsDebugger'
 ```
 
 # Create the debugger instance
